@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="id.ac.umn.finalproject.PemasukanActivity">
+    <item
+        android:id="@+id/delAllPemasukan"
+        android:orderInCategory="100"
+        android:title="Hapus Semua Pemasukan"
+        app:showAsAction="never" />
+</menu>
