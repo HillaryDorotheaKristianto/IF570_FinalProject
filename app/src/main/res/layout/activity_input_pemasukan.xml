@@ -6,47 +6,51 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15dp"
+    android:id="@+id/inputPemasukanActivity"
     tools:context=".InputPemasukanActivity">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tvNamaPemasukan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Nama Pemasukan: "
-            android:textSize="15sp"/>
-        <EditText
-            android:id="@+id/etNamaPemasukan"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:singleLine="true"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tvJumlahPemasukan"
-            android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"
-            android:text="Jumlah Pemasukan: "
-            android:textSize="15sp"/>
-        <EditText
-            android:id="@+id/etJumlahPemasukan"
-            android:layout_width="match_parent"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:singleLine="true"/>
-    </LinearLayout>
+            android:orientation="vertical"
+            android:background="@drawable/gradasi_list"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/tvNamaPemasukan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Nama Pemasukan: "
+                android:textSize="15sp"/>
+            <EditText
+                android:id="@+id/etNamaPemasukan"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:hint="Nama Pemasukan"
+                android:singleLine="true"/>
+            <TextView
+                android:id="@+id/tvJumlahPemasukan"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Pemasukan: "
+                android:textSize="15sp"/>
+            <EditText
+                android:id="@+id/etJumlahPemasukan"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah Pemasukan"
+                android:inputType="number"
+                android:singleLine="true"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="wrap_content"

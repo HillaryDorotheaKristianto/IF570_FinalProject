@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
@@ -41,6 +42,7 @@ public class PemasukanActivity extends AppCompatActivity {
     private static final int REQUEST_TAMBAH = 1;
     private RecyclerView rvPemasukan;
     private PemasukanViewModel pmskVM;
+    private CoordinatorLayout coordinatorLayout;
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityPemasukanBinding binding;
@@ -54,6 +56,9 @@ public class PemasukanActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
+
+        coordinatorLayout = findViewById(R.id.pemasukanActivity);
+        coordinatorLayout.setBackgroundColor(Color.rgb(249, 242, 231));
 
         FloatingActionButton inputPemasukan = findViewById(R.id.inputPemasukan);
         inputPemasukan.setOnClickListener(new View.OnClickListener() {

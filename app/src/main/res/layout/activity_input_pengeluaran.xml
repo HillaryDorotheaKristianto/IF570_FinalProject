@@ -6,47 +6,51 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15dp"
+    android:id="@+id/inputPengeluaranActivity"
     tools:context=".InputPengeluaranActivity">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tvNamaPengeluaran"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Nama Pengeluaran: "
-            android:textSize="15sp"/>
-        <EditText
-            android:id="@+id/etNamaPengeluaran"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:singleLine="true"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tvJumlahPengeluaran"
-            android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"
-            android:text="Jumlah Pengeluaran: "
-            android:textSize="15sp"/>
-        <EditText
-            android:id="@+id/etJumlahPengeluaran"
-            android:layout_width="match_parent"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:singleLine="true"/>
-    </LinearLayout>
+            android:background="@drawable/gradasi_list"
+            android:padding="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvNamaPengeluaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Nama Pengeluaran: "
+                android:textSize="15sp"/>
+            <EditText
+                android:id="@+id/etNamaPengeluaran"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:hint="Nama Pengeluaran"
+                android:singleLine="true"/>
+            <TextView
+                android:id="@+id/tvJumlahPengeluaran"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Pengeluaran: "
+                android:textSize="15sp"/>
+            <EditText
+                android:id="@+id/etJumlahPengeluaran"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah Pengeluaran"
+                android:inputType="number"
+                android:singleLine="true"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="wrap_content"

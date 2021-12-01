@@ -3,19 +3,25 @@ package id.ac.umn.finalproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class InputPengeluaranActivity extends AppCompatActivity {
 
     private EditText etNamaPengeluaran, etJumlahPengeluaran;
+    LinearLayout linearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_pengeluaran);
+
+        linearLayout = findViewById(R.id.inputPengeluaranActivity);
+        linearLayout.setBackgroundColor(Color.rgb(249, 242, 231));
 
         etNamaPengeluaran = findViewById(R.id.etNamaPengeluaran);
         etJumlahPengeluaran = findViewById(R.id.etJumlahPengeluaran);

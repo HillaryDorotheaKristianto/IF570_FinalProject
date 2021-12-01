@@ -1,6 +1,7 @@
 package id.ac.umn.finalproject;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
@@ -35,6 +37,7 @@ public class PengeluaranActivity extends AppCompatActivity {
     private static final int REQUEST_TAMBAH = 1;
     private RecyclerView rvPengeluaran;
     private PengeluaranViewModel pglrVM;
+    CoordinatorLayout coordinatorLayout;
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityPengeluaranBinding binding;
@@ -47,6 +50,9 @@ public class PengeluaranActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
+
+        coordinatorLayout = findViewById(R.id.pengeluaranActivity);
+        coordinatorLayout.setBackgroundColor(Color.rgb(249, 242, 231));
 
         FloatingActionButton inputPengeluaran = findViewById(R.id.inputPengeluaran);
         inputPengeluaran.setOnClickListener(new View.OnClickListener() {
